@@ -1,0 +1,128 @@
+# 📚 ConsultaBooks
+
+Projeto desenvolvido em Java com interface gráfica (Swing) para realizar consultas em um banco de dados **books**, permitindo buscar autores e livros de forma simples e visual.
+
+---
+
+## 🚀 Objetivo
+
+O objetivo do projeto é integrar:
+
+* Interface gráfica com **Java Swing**
+* Conexão com banco de dados via **JDBC**
+* Execução de consultas utilizando **SQL**
+
+Tudo isso de forma prática, permitindo que o usuário faça consultas sem precisar escrever código SQL diretamente.
+
+---
+
+## 🖥️ Funcionalidades
+
+O sistema permite realizar as seguintes consultas:
+
+* 🔍 Listar todos os autores
+* 📖 Buscar livros de um autor
+* 👤 Buscar autores de um título
+* 📚 Listar todos os títulos
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+* Java
+* Swing (interface gráfica)
+* JDBC (conexão com banco de dados)
+* Apache Derby (banco de dados)
+* SQL
+
+---
+
+## ⚙️ Como funciona
+
+1. O usuário escolhe uma opção no menu (ComboBox)
+2. Digita o nome de um autor ou título (quando necessário)
+3. Clica no botão **Executar**
+4. O sistema:
+
+   * Monta a consulta SQL
+   * Executa no banco de dados
+   * Exibe o resultado na tela
+
+---
+
+## 🧠 Estrutura do projeto
+
+* `JFrame` → Janela principal
+* `JComboBox` → Seleção da consulta
+* `JTextField` → Entrada de dados
+* `JTextArea` → Exibição dos resultados
+* `Connection` → Conexão com banco
+
+---
+
+## 🔌 Conexão com o banco
+
+A conexão é feita com o banco Derby utilizando:
+
+```java
+DriverManager.getConnection("jdbc:derby:books");
+```
+
+---
+
+## 📊 Exemplo de consulta SQL
+
+```sql
+SELECT firstName, lastName
+FROM authors
+ORDER BY lastName, firstName;
+```
+
+---
+
+## 🧩 Conceitos aplicados
+
+Este projeto reforça conceitos importantes de:
+
+* Programação Orientada a Objetos
+* Interface gráfica com Java
+* Banco de dados relacional
+* Execução de consultas SQL
+* Manipulação de ResultSet
+
+---
+
+## 🎯 Aprendizados
+
+Com esse projeto foi possível entender:
+
+* Como conectar Java a um banco de dados
+* Como criar interfaces gráficas simples
+* Como executar consultas dinâmicas
+* Como exibir dados em tela para o usuário
+
+---
+
+## ▶️ Como executar
+
+1. Certifique-se de ter o Java instalado
+2. Configure o banco Derby com o database **books**
+3. Compile o projeto
+4. Execute a classe:
+
+```java
+ConsultaBooks
+```
+
+---
+
+## 👨‍💻 Autores
+
+**Pedro Henrique Alves Albuquerque**
+**John Hesio**
+
+---
+
+## 💡 Observação
+
+Este projeto tem fins acadêmicos e foi desenvolvido para prática de integração entre Java e banco de dados.
